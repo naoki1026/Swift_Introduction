@@ -1,0 +1,78 @@
+//
+//  IntroThirdController.swift
+//  iPagong
+//
+//  Created by ipagong on 2018. 7. 12..
+//  Copyright © 2018년 iPagong. All rights reserved.
+//
+
+import UIKit
+import PGEZTransition
+
+class IntroThirdController: UIViewController {
+    
+    @IBOutlet weak var transformView: PGTransformView!
+    
+
+    @IBOutlet weak var title1: PGTransformLabel!
+    @IBOutlet weak var title2: PGTransformLabel!
+    
+    @IBOutlet weak var image1: PGTransformImageView!
+ 
+    @IBOutlet weak var menuView: PGTransformView!
+    
+    @IBOutlet weak var jumpButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    lazy var alert:UIAlertController = {
+        let alert = UIAlertController.init(title: nil, message: "あったかくして寝ろよ", preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+        return alert
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.transitionSetup()
+    }
+    
+    @IBAction func onNext(_ sender: Any) {
+        self.present(self.alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func onBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension IntroThirdController {
+    
+    func transitionSetup() {
+        transformView
+            .setStartAlpha(0.0, start: 0.0, duration: 1.0)
+            .setEndAlpha(0.0, start: 0.0, duration: 1.0)
+        
+        //메인 캐릭터 이미지
+        image1
+            .setStartTransform(.rateX(0.8), start: 0.0, duration: 1.0)
+            .setStartAlpha(1.0, start: 0.0, duration: 1.0)
+        
+        
+        title1
+            .setStartTransform(.rateX(0.2), start: 0.3, duration: 1.0)
+            .setStartAlpha(0.0, start: 0.0, duration: 1.0)
+            .setEndTransform(.zero, start: 0.0, duration: 1.0)
+            .setEndAlpha(0.0, start: 0.0, duration: 0.3)
+        
+        title2
+            .setStartTransform(.rateX(0.3), start: 0.3, duration: 1.0)
+            .setStartAlpha(0.0, start: 0.0, duration: 1.0)
+            .setEndTransform(.zero, start: 0.0, duration: 1.0)
+            .setEndAlpha(0.0, start: 0.0, duration: 0.3)
+        
+        menuView
+            .setStartAlpha(1.0, start: 1.0, duration: 0.0)
+            .setEndAlpha(1.0, start: 1.0, duration: 0.0)
+        
+    }
+}
+

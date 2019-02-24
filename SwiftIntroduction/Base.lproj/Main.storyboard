@@ -1,24 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wSB-vW-Ck4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro First Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="IntroFirstController" id="BYZ-38-t0r" customClass="IntroFirstController" customModule="SwiftIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="PGTransformView" customModule="PGEZTransition">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-x4-0Lz" customClass="PGTransformImageView" customModule="PGEZTransition">
+                                <rect key="frame" x="-1" y="207" width="376" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P3y-Ap-jDo" customClass="PGTransformView" customModule="PGEZTransition">
+                                <rect key="frame" x="-1" y="539" width="376" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQw-na-EPS">
+                                        <rect key="frame" x="265" y="19" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="next"/>
+                                        <connections>
+                                            <action selector="onNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bY-bC-M6l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2Q-aY-Ap8">
+                                        <rect key="frame" x="34" y="19" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="modoru"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ようこそ！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L2-iv-vpK" customClass="PGTransformLabel" customModule="PGEZTransition">
+                                <rect key="frame" x="152" y="109" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="こんにちは！！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwd-us-hw6" customClass="PGTransformLabel" customModule="PGEZTransition">
+                                <rect key="frame" x="134" y="149" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92080105089999997" blue="0.90673614700000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ncw-DD-1mX"/>
+                    <connections>
+                        <outlet property="image1" destination="DwW-x4-0Lz" id="SKL-Mb-Tw7"/>
+                        <outlet property="jumpButton" destination="C2Q-aY-Ap8" id="7UP-dg-tio"/>
+                        <outlet property="menuView" destination="P3y-Ap-jDo" id="vKh-oR-Kkv"/>
+                        <outlet property="nextButton" destination="YQw-na-EPS" id="0U4-P6-8pr"/>
+                        <outlet property="title1" destination="2L2-iv-vpK" id="vgs-aD-6CN"/>
+                        <outlet property="title2" destination="Hwd-us-hw6" id="Dn8-is-2Vl"/>
+                        <outlet property="transformView" destination="8bC-Xf-vdC" id="yhJ-pL-bHH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1071.2" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lW6-VC-Iiv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wSB-vW-Ck4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FID-Bt-lv7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="M2H-Wp-Ppw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAZ-Cs-ykx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="134"/>
+        </scene>
+        <!--Intro Second Controller-->
+        <scene sceneID="xqv-GW-M35">
+            <objects>
+                <viewController storyboardIdentifier="IntroSecondController" id="ncZ-I3-4rX" customClass="IntroSecondController" customModule="SwiftIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2uK-q7-WGD" customClass="PGTransformView" customModule="PGEZTransition">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="mfA-bo-5IO" customClass="PGTransformImageView" customModule="PGEZTransition">
+                                <rect key="frame" x="-1" y="207" width="376" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AiT-N7-QuN" customClass="PGTransformView" customModule="PGEZTransition">
+                                <rect key="frame" x="-1" y="539" width="376" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoS-6L-m5g">
+                                        <rect key="frame" x="265" y="19" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="next"/>
+                                        <connections>
+                                            <action selector="onNext:" destination="ncZ-I3-4rX" eventType="touchUpInside" id="aM0-76-n7b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUe-ck-PdP">
+                                        <rect key="frame" x="34" y="19" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="modoru"/>
+                                        <connections>
+                                            <action selector="onBack:" destination="ncZ-I3-4rX" eventType="touchUpInside" id="OkO-CI-PWj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="うれしいです" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-VX-0WZ" customClass="PGTransformLabel" customModule="PGEZTransition">
+                                <rect key="frame" x="135" y="146" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="気に入ってもらえると" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFr-zv-Xbv" customClass="PGTransformLabel" customModule="PGEZTransition">
+                                <rect key="frame" x="100" y="100" width="174" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92080105089999997" blue="0.90673614700000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="coe-ER-i9Y"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cUi-EG-BFB"/>
+                    <connections>
+                        <outlet property="image1" destination="mfA-bo-5IO" id="rww-pU-Pf1"/>
+                        <outlet property="jumpButton" destination="aUe-ck-PdP" id="XRP-tZ-hWO"/>
+                        <outlet property="menuView" destination="AiT-N7-QuN" id="5y6-Ck-Xh6"/>
+                        <outlet property="nextButton" destination="eoS-6L-m5g" id="87z-sT-9zG"/>
+                        <outlet property="title1" destination="tFr-zv-Xbv" id="qDi-XI-JAI"/>
+                        <outlet property="title2" destination="Umf-VX-0WZ" id="XUt-Nk-CKl"/>
+                        <outlet property="transformView" destination="2uK-q7-WGD" id="ErH-D6-2jz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hk0-Wr-f5V" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="134"/>
+        </scene>
+        <!--Intro Third Controller-->
+        <scene sceneID="3fL-Jb-mIg">
+            <objects>
+                <viewController storyboardIdentifier="IntroThirdController" id="tvM-wG-n9x" customClass="IntroThirdController" customModule="SwiftIntroduction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rxq-5a-Csq" customClass="PGTransformView" customModule="PGEZTransition">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image3" translatesAutoresizingMaskIntoConstraints="NO" id="ecf-eV-d6u" customClass="PGTransformImageView" customModule="PGEZTransition">
+                                <rect key="frame" x="-1" y="207" width="376" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8VQ-4R-9Mb" customClass="PGTransformView" customModule="PGEZTransition">
+                                <rect key="frame" x="-1" y="539" width="376" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4e-mR-h4c">
+                                        <rect key="frame" x="265" y="19" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="next"/>
+                                        <connections>
+                                            <action selector="onNext:" destination="tvM-wG-n9x" eventType="touchUpInside" id="4Vm-bH-mK0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDU-8o-Om0">
+                                        <rect key="frame" x="34" y="19" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="modoru"/>
+                                        <connections>
+                                            <action selector="onBack:" destination="tvM-wG-n9x" eventType="touchUpInside" id="zt3-I6-zsE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お願いします！！！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5l-Q7-vqg" customClass="PGTransformLabel" customModule="PGEZTransition">
+                                <rect key="frame" x="109" y="146" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="よろしく" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-86-QZE" customClass="PGTransformLabel" customModule="PGEZTransition">
+                                <rect key="frame" x="152" y="104" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92080105089999997" blue="0.90673614700000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Rkg-1N-fQY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KOM-ZA-3od"/>
+                    <connections>
+                        <outlet property="image1" destination="ecf-eV-d6u" id="nDS-By-yGd"/>
+                        <outlet property="jumpButton" destination="FDU-8o-Om0" id="Q0G-np-KiT"/>
+                        <outlet property="menuView" destination="8VQ-4R-9Mb" id="lS9-8a-U4I"/>
+                        <outlet property="nextButton" destination="Q4e-mR-h4c" id="DiS-Hy-hjW"/>
+                        <outlet property="title1" destination="nCa-86-QZE" id="4YU-O5-j5y"/>
+                        <outlet property="title2" destination="x5l-Q7-vqg" id="GVO-em-Xth"/>
+                        <outlet property="transformView" destination="Rxq-5a-Csq" id="svh-3r-ni6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2c-er-C2C" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image1" width="412" height="391"/>
+        <image name="image2" width="411" height="399"/>
+        <image name="image3" width="413" height="375"/>
+        <image name="modoru" width="128" height="128"/>
+        <image name="next" width="128" height="128"/>
+    </resources>
 </document>
